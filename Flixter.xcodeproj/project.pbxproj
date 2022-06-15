@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		697D3FBF285A4E9A0055988F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 697D3FBE285A4E9A0055988F /* AppDelegate.m */; };
 		697D3FC2285A4E9A0055988F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 697D3FC1285A4E9A0055988F /* SceneDelegate.m */; };
-		697D3FC5285A4E9A0055988F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 697D3FC4285A4E9A0055988F /* ViewController.m */; };
 		697D3FC8285A4E9A0055988F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 697D3FC6285A4E9A0055988F /* Main.storyboard */; };
 		697D3FCA285A4E9B0055988F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 697D3FC9285A4E9B0055988F /* Assets.xcassets */; };
 		697D3FCD285A4E9B0055988F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 697D3FCB285A4E9B0055988F /* LaunchScreen.storyboard */; };
@@ -17,6 +16,8 @@
 		697D3FDA285A4E9B0055988F /* FlixterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 697D3FD9285A4E9B0055988F /* FlixterTests.m */; };
 		697D3FE4285A4E9B0055988F /* FlixterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 697D3FE3285A4E9B0055988F /* FlixterUITests.m */; };
 		697D3FE6285A4E9B0055988F /* FlixterUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 697D3FE5285A4E9B0055988F /* FlixterUITestsLaunchTests.m */; };
+		697D3FF4285A87F10055988F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 697D3FF3285A87F10055988F /* ViewController.m */; };
+		69B5D796285A8A56009971EF /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B5D795285A8A56009971EF /* MovieViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +43,6 @@
 		697D3FBE285A4E9A0055988F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		697D3FC0285A4E9A0055988F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		697D3FC1285A4E9A0055988F /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		697D3FC3285A4E9A0055988F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		697D3FC4285A4E9A0055988F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		697D3FC7285A4E9A0055988F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		697D3FC9285A4E9B0055988F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		697D3FCC285A4E9B0055988F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +53,10 @@
 		697D3FDF285A4E9B0055988F /* FlixterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlixterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		697D3FE3285A4E9B0055988F /* FlixterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlixterUITests.m; sourceTree = "<group>"; };
 		697D3FE5285A4E9B0055988F /* FlixterUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlixterUITestsLaunchTests.m; sourceTree = "<group>"; };
+		697D3FF2285A87F10055988F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		697D3FF3285A87F10055988F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		69B5D794285A8A56009971EF /* MovieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
+		69B5D795285A8A56009971EF /* MovieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +111,11 @@
 				697D3FBE285A4E9A0055988F /* AppDelegate.m */,
 				697D3FC0285A4E9A0055988F /* SceneDelegate.h */,
 				697D3FC1285A4E9A0055988F /* SceneDelegate.m */,
-				697D3FC3285A4E9A0055988F /* ViewController.h */,
-				697D3FC4285A4E9A0055988F /* ViewController.m */,
 				697D3FC6285A4E9A0055988F /* Main.storyboard */,
+				69B5D794285A8A56009971EF /* MovieViewController.h */,
+				69B5D795285A8A56009971EF /* MovieViewController.m */,
+				697D3FF3285A87F10055988F /* ViewController.m */,
+				697D3FF2285A87F10055988F /* ViewController.h */,
 				697D3FC9285A4E9B0055988F /* Assets.xcassets */,
 				697D3FCB285A4E9B0055988F /* LaunchScreen.storyboard */,
 				697D3FCE285A4E9B0055988F /* Info.plist */,
@@ -266,9 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				697D3FC5285A4E9A0055988F /* ViewController.m in Sources */,
 				697D3FBF285A4E9A0055988F /* AppDelegate.m in Sources */,
+				69B5D796285A8A56009971EF /* MovieViewController.m in Sources */,
 				697D3FD0285A4E9B0055988F /* main.m in Sources */,
+				697D3FF4285A87F10055988F /* ViewController.m in Sources */,
 				697D3FC2285A4E9A0055988F /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
