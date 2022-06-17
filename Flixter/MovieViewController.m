@@ -6,6 +6,8 @@
 //
 
 #import "MovieViewController.h"
+#import "MovieCell.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface MovieViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -31,24 +33,31 @@
            }
            else {
                NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-              // NSLog(@"%@", dataDictionary);
+               NSLog(@"%@", dataDictionary);
                // TODO: Get the array of movies
-               NSArray *myArray = dataDictionary[@"results"];
+              self.movies = dataDictionary[@"results"];
                // TODO: Store the movies in a property to use elsewhere
-               NSLog(@"%@", myArray);
+               for (NSDictionary *movie in self.movies) {
+                   NSLog(@"%@", movie[@"title"]);
+               }
+               
+               [self.tableView reloadData];
                // TODO: Reload your table view data
+                
            }
        }];
     [task resume];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section { //required method from UITableViewDataSource
-    return 20; // # of cells
+    return self.movies.count; // # of cells
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{ //required method from UITableViewDataSource
-    UITableViewCell *cell = [[UITableViewCell alloc] init]; //class constructor
+    MovieCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"MovieCell" forIndexPath:indexPath]; //class constructor
     
-    cell.textLabel.text = [NSString stringWithFormat:@"row: %d, section %d", indexPath.row, indexPath.section]; // labels the cell with text
+    NSDictionary *movie = self.movies[indexPath.row];
+    
+    cell.textLabel.text = movie[@"title"]; // labels the cell with text
     
     return cell;
 }

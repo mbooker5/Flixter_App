@@ -10,6 +10,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MovieCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UIImageView *movieImage;
+@property (strong, nonatomic) IBOutlet UILabel *moveTitle;
+@property (strong, nonatomic) IBOutlet UILabel *movieDescription;
+@property (strong, nonatomic) IBOutlet UIView *movieViewCell;
+
 
 @end
 
