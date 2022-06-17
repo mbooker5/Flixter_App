@@ -8,11 +8,13 @@
 #import "MovieViewController.h"
 #import "MovieCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "DetailsViewController.h"
 
 @interface MovieViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *movies;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *movieIndicator;
 
 @end
 
@@ -25,7 +27,7 @@
     self.tableView.delegate = self;
     
     // Do any additional setup after loading the view.
-    
+    [self.movieIndicator startAnimating];
     [self fetchMovies];
     
     self.refreshControl = [[UIRefreshControl alloc] init];
@@ -44,6 +46,7 @@
                NSLog(@"%@", [error localizedDescription]);
            }
            else {
+               [self.movieIndicator stopAnimating];
                NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
                NSLog(@"%@", dataDictionary);
                // TODO: Get the array of movies
@@ -92,14 +95,21 @@
     
     return cell;
 }
-/*
-#pragma mark - Navigation
+
+// #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    //you'll need to have gotten an index with indexPathForCell
+    NSIndexPath *myIndexPath = [self.tableView indexPathForCell:sender];
+    NSDictionary *dataToPass = self.movies[myIndexPath.row];
+    DetailsViewController *detailVC = [segue destinationViewController];
+    detailVC.detailDict = dataToPass;
+    
 }
-*/
+
 
 @end

@@ -10,6 +10,7 @@
 		0E8CCDB193B69829A6C68F4E /* Pods_Flixter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF48C4AA0E28070FCF372979 /* Pods_Flixter.framework */; };
 		1DE67997826B389FD27E3D54 /* Pods_FlixterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6073F3019680435637360A /* Pods_FlixterTests.framework */; };
 		696D0626285CF2300053C115 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 696D0625285CF2300053C115 /* MovieCell.m */; };
+		696D0629285D258C0053C115 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696D0628285D258C0053C115 /* DetailsViewController.m */; };
 		697D3FBF285A4E9A0055988F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 697D3FBE285A4E9A0055988F /* AppDelegate.m */; };
 		697D3FC2285A4E9A0055988F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 697D3FC1285A4E9A0055988F /* SceneDelegate.m */; };
 		697D3FC8285A4E9A0055988F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 697D3FC6285A4E9A0055988F /* Main.storyboard */; };
@@ -46,6 +47,8 @@
 		50A53455964CF981C7A7279E /* Pods-Flixter-FlixterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flixter-FlixterUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flixter-FlixterUITests/Pods-Flixter-FlixterUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		696D0624285CF2300053C115 /* MovieCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
 		696D0625285CF2300053C115 /* MovieCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
+		696D0627285D258C0053C115 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		696D0628285D258C0053C115 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		697D3FBA285A4E9A0055988F /* Flixter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flixter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		697D3FBD285A4E9A0055988F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		697D3FBE285A4E9A0055988F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				696D0625285CF2300053C115 /* MovieCell.m */,
 				69B5D794285A8A56009971EF /* MovieViewController.h */,
 				69B5D795285A8A56009971EF /* MovieViewController.m */,
+				696D0627285D258C0053C115 /* DetailsViewController.h */,
+				696D0628285D258C0053C115 /* DetailsViewController.m */,
 				697D3FF3285A87F10055988F /* ViewController.m */,
 				697D3FF2285A87F10055988F /* ViewController.h */,
 				697D3FC9285A4E9B0055988F /* Assets.xcassets */,
@@ -417,6 +422,7 @@
 				69B5D796285A8A56009971EF /* MovieViewController.m in Sources */,
 				696D0626285CF2300053C115 /* MovieCell.m in Sources */,
 				697D3FD0285A4E9B0055988F /* main.m in Sources */,
+				696D0629285D258C0053C115 /* DetailsViewController.m in Sources */,
 				697D3FF4285A87F10055988F /* ViewController.m in Sources */,
 				697D3FC2285A4E9A0055988F /* SceneDelegate.m in Sources */,
 			);
