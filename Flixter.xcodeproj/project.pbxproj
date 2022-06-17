@@ -49,6 +49,7 @@
 		696D0625285CF2300053C115 /* MovieCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 		696D0627285D258C0053C115 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		696D0628285D258C0053C115 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		696D062A285D467C0053C115 /* ReadME.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadME.md; sourceTree = "<group>"; };
 		697D3FBA285A4E9A0055988F /* Flixter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flixter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		697D3FBD285A4E9A0055988F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		697D3FBE285A4E9A0055988F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -157,6 +158,7 @@
 				697D3FCB285A4E9B0055988F /* LaunchScreen.storyboard */,
 				697D3FCE285A4E9B0055988F /* Info.plist */,
 				697D3FCF285A4E9B0055988F /* main.m */,
+				696D062A285D467C0053C115 /* ReadME.md */,
 			);
 			path = Flixter;
 			sourceTree = "<group>";
