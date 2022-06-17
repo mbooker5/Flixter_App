@@ -46,6 +46,7 @@
                 
            }
        }];
+    
     [task resume];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section { //required method from UITableViewDataSource
@@ -55,9 +56,20 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{ //required method from UITableViewDataSource
     MovieCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"MovieCell" forIndexPath:indexPath]; //class constructor
     
+    // using indexPath
     NSDictionary *movie = self.movies[indexPath.row];
     
-    cell.textLabel.text = movie[@"title"]; // labels the cell with text
+    // loading each poster image
+    NSString *baseURL = @"https://image.tmdb.org/t/p/w500";
+    NSString *urlString = movie[@"poster_path"];
+    NSString *fullURL = [baseURL stringByAppendingString:urlString];
+    NSURL *url = [[NSURL alloc] initWithString:fullURL];
+    
+    [cell.movieImage setImageWithURL:url];
+    
+    cell.moveTitle.text = movie[@"title"]; // labels the cell with text
+    cell.movieDescription.text = movie[@"overview"];
+    
     
     return cell;
 }
