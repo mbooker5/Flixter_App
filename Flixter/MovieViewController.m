@@ -16,6 +16,8 @@
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *movieIndicator;
 
+
+
 @end
 
 @implementation MovieViewController
@@ -30,6 +32,7 @@
     [self.movieIndicator startAnimating];
     [self fetchMovies];
     
+    
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(fetchMovies) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
@@ -43,6 +46,15 @@
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
            if (error != nil) {
+               UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Network Error"
+                                              message:@"Please connect to the internet and press OK."
+                                              preferredStyle:UIAlertControllerStyleAlert];
+                
+               UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                   handler:^(UIAlertAction * action){[self fetchMovies];}];
+               [alert addAction:defaultAction];
+               [self presentViewController:alert animated:YES completion:nil];
+               
                NSLog(@"%@", [error localizedDescription]);
            }
            else {
@@ -112,4 +124,6 @@
 }
 
 
+- (IBAction)networkAlert:(id)sender {
+}
 @end

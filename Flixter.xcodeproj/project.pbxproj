@@ -11,6 +11,9 @@
 		1DE67997826B389FD27E3D54 /* Pods_FlixterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6073F3019680435637360A /* Pods_FlixterTests.framework */; };
 		696D0626285CF2300053C115 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 696D0625285CF2300053C115 /* MovieCell.m */; };
 		696D0629285D258C0053C115 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696D0628285D258C0053C115 /* DetailsViewController.m */; };
+		696D062D285E9AF40053C115 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696D062C285E9AF40053C115 /* TabBarController.m */; };
+		696D0630285E9C240053C115 /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 696D062F285E9C240053C115 /* GridViewController.m */; };
+		696D0633285E9DE80053C115 /* CollectionViewGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 696D0632285E9DE80053C115 /* CollectionViewGridCell.m */; };
 		697D3FBF285A4E9A0055988F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 697D3FBE285A4E9A0055988F /* AppDelegate.m */; };
 		697D3FC2285A4E9A0055988F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 697D3FC1285A4E9A0055988F /* SceneDelegate.m */; };
 		697D3FC8285A4E9A0055988F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 697D3FC6285A4E9A0055988F /* Main.storyboard */; };
@@ -50,6 +53,12 @@
 		696D0627285D258C0053C115 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		696D0628285D258C0053C115 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		696D062A285D467C0053C115 /* ReadME.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadME.md; sourceTree = "<group>"; };
+		696D062B285E9AF40053C115 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		696D062C285E9AF40053C115 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		696D062E285E9C240053C115 /* GridViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridViewController.h; sourceTree = "<group>"; };
+		696D062F285E9C240053C115 /* GridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridViewController.m; sourceTree = "<group>"; };
+		696D0631285E9DE80053C115 /* CollectionViewGridCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewGridCell.h; sourceTree = "<group>"; };
+		696D0632285E9DE80053C115 /* CollectionViewGridCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewGridCell.m; sourceTree = "<group>"; };
 		697D3FBA285A4E9A0055988F /* Flixter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flixter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		697D3FBD285A4E9A0055988F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		697D3FBE285A4E9A0055988F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -146,6 +155,12 @@
 				697D3FC0285A4E9A0055988F /* SceneDelegate.h */,
 				697D3FC1285A4E9A0055988F /* SceneDelegate.m */,
 				697D3FC6285A4E9A0055988F /* Main.storyboard */,
+				696D0631285E9DE80053C115 /* CollectionViewGridCell.h */,
+				696D0632285E9DE80053C115 /* CollectionViewGridCell.m */,
+				696D062E285E9C240053C115 /* GridViewController.h */,
+				696D062F285E9C240053C115 /* GridViewController.m */,
+				696D062B285E9AF40053C115 /* TabBarController.h */,
+				696D062C285E9AF40053C115 /* TabBarController.m */,
 				696D0624285CF2300053C115 /* MovieCell.h */,
 				696D0625285CF2300053C115 /* MovieCell.m */,
 				69B5D794285A8A56009971EF /* MovieViewController.h */,
@@ -421,10 +436,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				697D3FBF285A4E9A0055988F /* AppDelegate.m in Sources */,
+				696D0630285E9C240053C115 /* GridViewController.m in Sources */,
+				696D0633285E9DE80053C115 /* CollectionViewGridCell.m in Sources */,
 				69B5D796285A8A56009971EF /* MovieViewController.m in Sources */,
 				696D0626285CF2300053C115 /* MovieCell.m in Sources */,
 				697D3FD0285A4E9B0055988F /* main.m in Sources */,
 				696D0629285D258C0053C115 /* DetailsViewController.m in Sources */,
+				696D062D285E9AF40053C115 /* TabBarController.m in Sources */,
 				697D3FF4285A87F10055988F /* ViewController.m in Sources */,
 				697D3FC2285A4E9A0055988F /* SceneDelegate.m in Sources */,
 			);
