@@ -28,6 +28,10 @@
     
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"CollectionGridViewCell", (long)indexPath.row);
+}
+
 - (void)fetchMovies {
     NSURL *url = [NSURL URLWithString:@"https://api.themoviedb.org/3/movie/now_playing?api_key=f53f4a7976b1c4b5242a714f742c3764"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10.0];
@@ -90,14 +94,20 @@
 
 
 
-/*
-#pragma mark - Navigation
+
+// #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    //you'll need to have gotten an index with indexPathForCell
+    NSIndexPath *myIndexPath = [self.collectionView indexPathForCell:sender];
+    NSDictionary *dataToPass = self.movies[myIndexPath.row];
+    DetailsViewController *detailVC = [segue destinationViewController];
+    detailVC.detailDict = dataToPass;
 }
-*/
+
 
 @end

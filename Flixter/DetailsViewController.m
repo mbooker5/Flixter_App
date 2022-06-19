@@ -7,6 +7,7 @@
 
 #import "DetailsViewController.h"
 #import "MovieViewController.h"
+#import "GridViewController.h"
 #import "UIImageView+AFNetworking.h"
 
 @interface DetailsViewController ()
