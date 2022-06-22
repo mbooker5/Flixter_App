@@ -9,10 +9,11 @@
 #import "MovieCell.h"
 #import "UIImageView+AFNetworking.h"
 #import "DetailsViewController.h"
+#import "Movie.h"
 
 @interface MovieViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSArray *movies;
+@property (nonatomic, strong) NSMutableArray *movies;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *movieIndicator;
 
@@ -58,19 +59,25 @@
                NSLog(@"%@", [error localizedDescription]);
            }
            else {
-               [self.movieIndicator stopAnimating];
-               NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-               NSLog(@"%@", dataDictionary);
-               // TODO: Get the array of movies
-              self.movies = dataDictionary[@"results"];
-               // TODO: Store the movies in a property to use elsewhere
-               for (NSDictionary *movie in self.movies) {
-                   NSLog(@"%@", movie[@"title"]);
-               }
-               
-               [self.tableView reloadData];
-               // TODO: Reload your table view data
-                
+                [self.movieIndicator stopAnimating];
+                NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                NSLog(@"%@", dataDictionary);
+                // TODO: Get the array of movies
+                // self.movies = dataDictionary[@"results"];
+                NSArray *dictionaries = dataDictionary[@"results"];
+                for (NSDictionary *dictionary in dictionaries) {
+                   Movie *movie = // Call the Movie initializer here
+                    [[Movie alloc] initWithDictionary:dictionary];
+                    [self.movies addObject:movie];
+                }
+                // TODO: Store the movies in a property to use elsewhere
+                for (Movie *movie in self.movies) {
+                   NSLog(@"%@", movie.title);
+                }
+
+                [self.tableView reloadData];
+                // TODO: Reload your table view data
+
            }
         [self.refreshControl endRefreshing];
        }];
@@ -91,18 +98,18 @@
     MovieCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"MovieCell" forIndexPath:indexPath]; //class constructor
     
     // using indexPath
-    NSDictionary *movie = self.movies[indexPath.row];
+    Movie *movie = self.movies[indexPath.row];
     
     // loading each poster image
-    NSString *baseURL = @"https://image.tmdb.org/t/p/w500";
-    NSString *urlString = movie[@"poster_path"];
-    NSString *fullURL = [baseURL stringByAppendingString:urlString];
-    NSURL *url = [[NSURL alloc] initWithString:fullURL];
+//    NSString *baseURL = @"https://image.tmdb.org/t/p/w500";
+//    NSString *urlString = movie.posterURLString;
+//    NSString *fullURL = [baseURL stringByAppendingString:urlString];
+//    NSURL *url = [[NSURL alloc] initWithString:fullURL];
     
-    [cell.movieImage setImageWithURL:url];
+    [cell.movieImage setImageWithURL:movie.posterUrl];
     
-    cell.moveTitle.text = movie[@"title"]; // labels the cell with text
-    cell.movieDescription.text = movie[@"overview"];
+    cell.movieTitle.text = movie.title; // labels the cell with text
+    cell.movieDescription.text = movie.overview;
     
     
     return cell;

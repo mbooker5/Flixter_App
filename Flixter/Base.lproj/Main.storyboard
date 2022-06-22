@@ -26,17 +26,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="Ahr-fM-6Yd" translatesAutoresizingMaskIntoConstraints="NO" id="CXL-cE-jxc">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="245"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAe-WO-Qhh">
-                                                    <rect key="frame" x="206" y="0.0" width="188" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAe-WO-Qhh">
+                                                    <rect key="frame" x="180" y="30" width="214" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DK6-Pt-PBo">
-                                                    <rect key="frame" x="206" y="48" width="188" height="152"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -47,10 +39,22 @@
                                                         <constraint firstAttribute="width" constant="150" id="gIy-aX-8d3"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DK6-Pt-PBo">
+                                                    <rect key="frame" x="180" y="76" width="214" height="147"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="DK6-Pt-PBo" firstAttribute="leading" secondItem="iyU-lO-c4T" secondAttribute="trailing" constant="20" id="5FM-VZ-loW"/>
+                                                <constraint firstItem="GAe-WO-Qhh" firstAttribute="top" secondItem="CXL-cE-jxc" secondAttribute="top" constant="30" id="8Bu-67-ncr"/>
+                                                <constraint firstItem="GAe-WO-Qhh" firstAttribute="leading" secondItem="iyU-lO-c4T" secondAttribute="trailing" constant="20" id="9lR-dd-bgw"/>
                                                 <constraint firstItem="iyU-lO-c4T" firstAttribute="top" secondItem="CXL-cE-jxc" secondAttribute="top" constant="22" id="FhD-dU-8VZ"/>
+                                                <constraint firstItem="DK6-Pt-PBo" firstAttribute="top" secondItem="GAe-WO-Qhh" secondAttribute="bottom" constant="30" id="PAP-mX-P1k"/>
                                                 <constraint firstAttribute="bottom" secondItem="iyU-lO-c4T" secondAttribute="bottom" constant="22" id="cHw-uz-O02"/>
+                                                <constraint firstAttribute="trailing" secondItem="GAe-WO-Qhh" secondAttribute="trailing" constant="20" id="fnk-cH-a8m"/>
+                                                <constraint firstAttribute="trailing" secondItem="DK6-Pt-PBo" secondAttribute="trailing" constant="20" id="iAp-hY-6ll"/>
                                                 <constraint firstItem="iyU-lO-c4T" firstAttribute="leading" secondItem="CXL-cE-jxc" secondAttribute="leading" constant="10" id="kae-yk-0eA"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -64,9 +68,9 @@
                                             <constraint firstItem="CXL-cE-jxc" firstAttribute="leading" secondItem="Ahr-fM-6Yd" secondAttribute="leading" id="z7a-Hp-Wcc"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="moveTitle" destination="GAe-WO-Qhh" id="FF7-1S-KCr"/>
                                             <outlet property="movieDescription" destination="DK6-Pt-PBo" id="T2x-K7-9ur"/>
                                             <outlet property="movieImage" destination="iyU-lO-c4T" id="WKk-Av-3i2"/>
+                                            <outlet property="movieTitle" destination="GAe-WO-Qhh" id="eww-tK-M0Y"/>
                                             <outlet property="movieViewCell" destination="CXL-cE-jxc" id="g9c-Fg-67T"/>
                                             <segue destination="Bep-5l-KXP" kind="show" id="hbJ-ie-LC1"/>
                                         </connections>
