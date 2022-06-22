@@ -29,12 +29,16 @@
     NSString *fullPosterURLString = [baseURLString stringByAppendingString:self.posterURLString];
     NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
     self.posterUrl = posterURL;
+    
+//    NSData *urlData = [NSData dataWithContentsOfURL:posterURL];
+//    UIImage *movieImage = [UIImage imageWithData:urlData];
+//    self.poster = movieImage;
  }
     
  return self;
 }
 
-+ (NSArray *)moviesWithDictionaries:(NSArray *)dictionaries {
++ (NSMutableArray *)moviesWithDictionaries:(NSArray *)dictionaries {
    // Implement this function
     NSMutableArray *movies = [NSMutableArray array];
     for (NSDictionary *dictionary in dictionaries) {

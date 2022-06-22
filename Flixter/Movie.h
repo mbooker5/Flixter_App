@@ -15,10 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *overview;
 @property (nonatomic, strong) NSString *posterURLString;
 @property (nonatomic, strong) NSURL *posterUrl;
+//@property (nonatomic, strong) UIImage *poster;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
-+ (NSArray *)moviesWithDictionaries: (NSArray *)dictionaries;
++ (NSMutableArray *)moviesWithDictionaries: (NSArray *)dictionaries;
 
 @end
 

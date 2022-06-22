@@ -65,13 +65,10 @@
                 // TODO: Get the array of movies
                 // self.movies = dataDictionary[@"results"];
                 NSArray *dictionaries = dataDictionary[@"results"];
-                for (NSDictionary *dictionary in dictionaries) {
-                   Movie *movie = // Call the Movie initializer here
-                    [[Movie alloc] initWithDictionary:dictionary];
-                    [self.movies addObject:movie];
-                }
+               
                 // TODO: Store the movies in a property to use elsewhere
-                for (Movie *movie in self.movies) {
+               self.movies = [Movie moviesWithDictionaries:dictionaries];
+               for (Movie *movie in self.movies) {
                    NSLog(@"%@", movie.title);
                 }
 
@@ -95,10 +92,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{ //required method from UITableViewDataSource
-    MovieCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"MovieCell" forIndexPath:indexPath]; //class constructor
+    MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell" forIndexPath:indexPath]; //class constructor
     
     // using indexPath
-    Movie *movie = self.movies[indexPath.row];
+    cell.movie = self.movies[indexPath.row];
     
     // loading each poster image
 //    NSString *baseURL = @"https://image.tmdb.org/t/p/w500";
@@ -106,11 +103,11 @@
 //    NSString *fullURL = [baseURL stringByAppendingString:urlString];
 //    NSURL *url = [[NSURL alloc] initWithString:fullURL];
     
-    [cell.movieImage setImageWithURL:movie.posterUrl];
+//    [cell.movieImage setImageWithURL:movie.posterUrl];
+//    cell.movieImage.image = movie.movieImage;
     
-    cell.movieTitle.text = movie.title; // labels the cell with text
-    cell.movieDescription.text = movie.overview;
-    
+//    cell.movieTitle.text = movie.title; // labels the cell with text
+//    cell.movieDescription.text = movie.overview;
     
     return cell;
 }

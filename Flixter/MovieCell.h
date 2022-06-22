@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Movie.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UILabel *movieTitle;
 @property (strong, nonatomic) IBOutlet UILabel *movieDescription;
 @property (strong, nonatomic) IBOutlet UIView *movieViewCell;
-
+@property (nonatomic, strong) Movie *movie;
 
 @end
 
